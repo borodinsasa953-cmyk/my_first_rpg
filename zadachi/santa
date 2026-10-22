@@ -1,0 +1,13 @@
+import random
+spisok = []
+n = int(input('Введите количество друзей: '))
+for i in range(n):
+    r = 'Друг' + str(i+1) + ': '
+    name = input(r)
+    spisok.append(name)
+random.shuffle(spisok)
+print('Результат:')
+for i in range(len(spisok)):
+    a = spisok [i]
+    b = spisok [(i+1) % len(spisok)]
+    print(a, '=', b)

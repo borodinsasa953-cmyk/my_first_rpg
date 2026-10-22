@@ -1,0 +1,16 @@
+while True:
+    print('1. Добавить новую запись')
+    print('2. Показать все записи')
+    a = input('Выберите действие: ')
+    if a == '1': 
+        b = input('Введите запись: ')
+        file = open('training.txt','a', encoding='utf-8')
+        file.write(b + '\n')
+        file.close()
+    elif a == '2':
+        try:
+            file = open('training.txt', 'r', encoding='utf-8')
+            print(file.read())
+            file.close()
+        except FileNotFoundError:
+            print('Дневник пуст')

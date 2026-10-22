@@ -1,0 +1,20 @@
+students = {}
+total = 0
+best_name = ''
+best_ball = 0
+while True:
+    name = input('Введите имя(или стоп): ')
+    if name == 'стоп':
+        break
+    ball = int(input('Введите оценку: '))
+    students[name] = ball
+print('Студенты:')
+for name in students:
+    if students[name] > best_ball:
+        best_ball = students[name]
+        best_name = name
+    print(name, ':', students[name])
+    total = total + students[name]
+best_ball=str(best_ball)
+print('Средний балл: ',total/len(students))
+print('Лучший студент: ',best_name, '('+ best_ball + ')' )

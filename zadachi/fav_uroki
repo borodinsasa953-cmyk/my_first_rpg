@@ -1,0 +1,7 @@
+sl={}
+for i in range(3):
+    name= input('Введите имя: ' )
+    urok= input('Введите любимый урок: ')
+    sl[name] = urok
+for name in sl:
+    print( name, 'любит', sl[name])

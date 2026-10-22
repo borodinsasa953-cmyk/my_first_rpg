@@ -1,0 +1,18 @@
+inventory={}
+total=0
+while True:
+    name=input('Введите название (или стоп): ')
+    if name == 'стоп':
+        break
+    count=int(input('Введите количество (или стоп): '))
+    if count== 'стоп':
+        break
+    if name in inventory:
+        inventory[name]= inventory[name]+ count
+    else:
+        inventory[name] = count
+print('Инвентарь:')
+for name in inventory:
+    print(name, ':', inventory[name])
+    total= total+inventory[name]
+print('Всего предметов:', total)

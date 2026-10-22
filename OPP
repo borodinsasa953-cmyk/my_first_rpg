@@ -1,0 +1,16 @@
+#name = 'Геральт'
+    #hp = 100
+    #gold = 50
+    #def say_hello(self):
+        #print(f'Привет меня зовут {self.name}, у меня {self.hp} здоровья и {self.gold} золота')
+#hero = Hero()
+#hero.say_hello()
+class Pet:
+    name = 'Шарик'
+    hunger = 50
+    mood = 'Радостный' 
+    def feed(self):
+        self.hunger = max(0, self.hunger - 20)
+        print(f'Шарик поел! Теперь его голод {self.hunger}')
+pet = Pet()
+pet.feed()

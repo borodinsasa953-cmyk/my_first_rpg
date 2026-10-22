@@ -1,0 +1,18 @@
+class Animal:
+    name = None
+    def __init__(self, name):
+        self.name = name
+    def make_sound(self):
+        print(f'{self.name} говорит : ')
+class Dog(Animal):
+    def make_sound(self):
+        print(f'Собака: {self.name} говорит: Гав-гав!')
+class Cat(Animal):
+    def make_sound(self):
+        print(f'Кошка: {self.name} говорит: Мяу-мяу!')
+class Cow(Animal):
+    def make_sound(self):
+        print(f'Корова: {self.name} говорит: Му-у-у!')
+animals = [Dog('Шарик'), Cat('Мурка'), Cow('Бурёнка')]
+for i in animals:
+    i.make_sound()

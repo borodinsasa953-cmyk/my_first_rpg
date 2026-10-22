@@ -1,0 +1,25 @@
+friends = set() #друзья ани
+friends2 = set() #друзья бори
+friends3 = set() #общие друзья
+all_friends = set()
+n = int(input('Сколько друзей у Ани? '))
+for i in range (n):
+    txt = 'Друг ' + str(i+1) + ': '
+    friend = input(txt)
+    friends.add(friend)
+    all_friends.add(friend)
+n2 = int(input('Сколько друзей у Бори? '))
+for j in range (n2):
+    txt2 = 'Друг ' + str(j+1) + ' : '
+    friend2 = input(txt2)
+    friends2.add(friend2)
+    all_friends.add(friend2)
+    if friend2 in friends:
+        friends3.add(friend2)
+print('Общие друзья: ', friends3)
+print('Все друзья: ',all_friends)
+print('Только у Ани: ', friends - friends2)
+print(friends - friends2)    
+print(friends & friends2)
+print(friends ^ friends2)
+print(friends >= friends2)

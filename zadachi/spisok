@@ -1,0 +1,8 @@
+n=int(input('Количество оценок '))
+num=[]
+for i in range(n):
+    r='Оценка ' + str(i+1) + ': '
+    num.append(int(input(r)))
+print('Максимальный балл:', max(num))
+print('Минимальный балл:', min(num))
+print("Средний балл:", sum(num)/len(num))

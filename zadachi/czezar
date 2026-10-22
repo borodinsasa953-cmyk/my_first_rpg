@@ -1,0 +1,11 @@
+alp='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+a=input('Слово: ')
+b=int(input('Число сдвига: '))
+result=''
+for i in range(len(a)):
+    letter=a[i]
+    index= alp.find(letter)
+    new_index=(index+b)%len(alp)
+    new_letter=alp[new_index]
+    result=result+new_letter
+print(result)

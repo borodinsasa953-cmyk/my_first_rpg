@@ -1,0 +1,8 @@
+book={}
+for i in range(3):
+    name= input('Введите имя: ')
+    number= input('Введите номер: ')
+    book[name]= number
+print ('Телефонная книжка')
+for name in book:
+    print(name + ':'+book[name])

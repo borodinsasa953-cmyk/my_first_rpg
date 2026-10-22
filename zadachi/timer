@@ -1,0 +1,14 @@
+import time
+def timer(func):
+    def wrapper():
+        start = time.time()
+        func()
+        end = time.time()
+        print(end - start, 'секунд')
+    return wrapper
+@timer 
+def slow_func():
+    print('Запускаюсь...')
+    time.sleep(5)
+    print('Заканчиваю...')
+slow_func()

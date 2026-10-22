@@ -1,0 +1,28 @@
+def add(a,b):
+    return  a + b
+def subtract (a,b):
+    return a - b
+def multuplu(a,b):
+    return a * b
+def delenie (a,b):
+    if b == 0:
+        print ('На ноль делить нельзя!')
+    else:
+        return a / b
+while True:
+    a = int(input('Введите первое число: '))
+    b = int(input('Введите второе число: '))
+    c = input ('Введите операцию: ')
+    if c == '+':
+        print('Результат: ',add(a,b))
+    elif c == '-':
+        print('Результат: ', subtract(a,b))
+    elif c == '*':
+        print('Результат: ', multuplu(a,b))
+    elif c == '/':
+        print('Результат: ', delenie(a,b))
+    else:
+        print('Неверная операция')
+    command = input('Продолжите или введите стоп: ')
+    if command == 'стоп':
+        break

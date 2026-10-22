@@ -1,0 +1,6 @@
+def summa(a,b):
+    res = a + b
+    return res
+res=summa(5,7)
+print(summa('i', 'лох'))
+print(res)

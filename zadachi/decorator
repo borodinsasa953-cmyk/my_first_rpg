@@ -1,0 +1,11 @@
+def validator(func):
+    def wrapper():
+        print('**********')
+        func()
+        print('**********')
+    return wrapper
+
+@validator
+def printer():
+    print('Программа выполнена')
+printer()

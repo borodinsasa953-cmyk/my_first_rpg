@@ -1,0 +1,8 @@
+def test():
+    for i  in range (20):
+        print(2**i)
+test()
+def test2(word):
+    print(word, "Привет!")
+test2('Саша')
+test2('Леха')

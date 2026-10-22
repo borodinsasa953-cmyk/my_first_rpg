@@ -1,0 +1,17 @@
+class Student:
+    def __init__(self,name,grades):
+        self.name = name
+        self.grades = grades
+    def show_average(self):
+        sr = sum(self.grades) / len(self.grades)
+        print(f'Студент {self.name} имеет средний балл: {sr}')
+    def add_g(self,new_grade):
+        self.grades.append(new_grade)
+Makar = Student('Макар',[5,3,5,4,4,2,5,5,5,5,5])
+Maxim = Student ('Максим', [2,3,3,2,4,5,3,4,3,3])
+Makar.show_average()
+Maxim.show_average()
+Makar.add_g(2)
+Maxim.add_g(5)
+Makar.show_average()
+Maxim.show_average()

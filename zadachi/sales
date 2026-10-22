@@ -1,0 +1,34 @@
+while True:
+    print('1. Записать новую продажу')
+    print('2. Показать статистику')
+    print('3. Удаление всех записей')
+    a = input('Выберите действие: ')
+    if a == '1':
+        b = input('Введите сумму продажи: ')
+        file = open('sales.txt', 'a',encoding='utf-8')
+        file.write(b + '\n')
+        file.close()
+    elif a == '2':
+        try:
+           file = open('sales.txt', 'r', encoding='utf-8')
+           lines = file.readlines()
+           file.close()
+           total = 0
+           count = 0
+           for line in lines:
+               sale = int(line)
+               total = total + sale
+               count = count + 1
+           if count == 0:
+                print('Продаж пока не было')
+           else:
+                average = total / count
+                print (f'Общая сумма: {total}')
+                print(f'Средний чек: {average}')
+        except FileNotFoundError:
+           print('Продаж пока не было') 
+    elif a == '3':
+        file = open('sales.txt', 'w', encoding='utf-8')
+        file.close()
+    else:
+        print('Неизвестная функция')

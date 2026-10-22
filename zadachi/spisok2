@@ -1,0 +1,14 @@
+n=int(input('Количество чисел '))
+num1=[] #нечетные 
+num2=[] #четные
+for i in range(n):
+    r ='Число ' + str(i+1) + ': '
+    a = int(input(r))
+    if a % 2 == 0:
+        num2.append(a)
+    else:
+        num1.append(a)
+print('Четные:', num2)
+print('Нечетные:', num1)
+print ('Сумма четных:', sum(num2))
+print('Сумма нечетных:', sum(num1))
